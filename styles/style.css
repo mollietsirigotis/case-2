@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+}
+
+.nav-top {
+    display: flex;
+    background-color: darkgray;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+a:hover {
+    background-color: rgb(71, 70, 70);
+}
