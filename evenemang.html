@@ -6,14 +6,72 @@
     <title>Evenemang</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <nav class="nav-top">
-        <a href="index.html">Start</a>
-        <a href="antiparos.html">Antiparos</a>
-        <a href="galleri.html">Galleri</a>
-        <a href="flaggor.html">Flaggor</a>
-        <a href="evenemang.html">Evenemang</a>
-</nav>
+
+
+
+
+
+<header>
+  <a href="index.html"><img src="img/logo2.png" alt="MinLogga" class="header_image" id="logo"></a>
+  
+  <div>
+    <ul class="topnav">
+      <li class="right"><a href="flaggor.html">FLAGGOR</a></li>
+      <li class="right"><a href="galleri.html">GALLERI</a></li>
+      <li class="right"><a class="active" href="evenemang.html">EVENEMANG</a></li>
+      <li class="right"><a href="antiparos.html">ANTIPAROS</a></li>
+      <li class="right"><a href="index.html">OM MIG</a></li> 
+    </ul>
+</div>
+</header>
+
+
+
+
+
+<div class="flex-container-top">
+  <div id="content-top">
+          <div class="main-div event">
+            <h2>Fyll i dina uppgifter här!</h2>
+            <form>
+              <label for="förnamn">Förnamn:</label><br>
+              <input type="text" id="förnamn" name="förnamn"><br>
+              <label for="efternamn">Efternamn:</label><br>
+              <input type="text" id="efternamn" name="efternamn">
+              <h2>Vad tycker du om mest?</h2>
+              <input type="radio" id="kakor" name="fav_snack" value="kakor">
+              <label for="kakor">Kakor</label><br>
+              <input type="radio" id="chips" name="fav_snack" value="chips">
+              <label for="chips">Chips</label><br>
+              <input type="radio" id="godis" name="fav_snack" value="godis">
+              <label for="godis">Godis</label><br><br>
+
+              <input type="submit" value="Submit">
+
+            </form>
+
+          </div>
+  </div>
+</div>
+<div class="flex-container-bottom">
+<div id="content">
+  <div class="article-top">
+
+  </div>
+  <div class="article-bottom">
+
+  </div>
+</div>
+<div id="sidebar">
+  <div id="sidebar-content">
+
+  </div>
+</div>
+</div>
+
+<footer>
+
+</footer>
     
 </body>
 </html>

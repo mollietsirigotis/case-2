@@ -1,20 +1,379 @@
+/* ____________ NY RESPONSIV KOD ______________ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: white;
 }
 
-.nav-top {
-    display: flex;
-    background-color: darkgray;
-    justify-content: center;
+/* --------- HEADER ---------- */
+
+header {
+   width:100%;
+   
+    
+    text-align: left;
+    padding-top: 30px;
+    background-color: #EFE6D2;
+
+}
+ 
+.header_image {
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: -30px;
+    width: 200px;
+    padding-left: 20px;
+}
+ 
+@media screen and (max-width: 1000px) {
+
+    header {
+        text-align: center;
+    }
+ 
+    .header_image {
+        padding: 0;
+    
+        margin-bottom: 10px;
+    }
 }
 
-a {
+/* MENYN */
+
+ul.topnav {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+
+}
+ 
+ul.topnav li {
+    float: left;
+}
+ 
+ul.topnav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 0 20px;
     text-decoration: none;
-    color: white;
-    padding: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: poppins;
+    
 }
-a:hover {
-    background-color: rgb(71, 70, 70);
+ 
+ul.topnav li a:hover:not(.active) {
+    /* background-color: #ffffff5b; */
+    color: #DB4A2B;
+ 
 }
+ 
+ul.topnav li a.active {
+    color: #DB4A2B;
+    font-weight: bold;
+    /* border-bottom: 2px solid currentColor; */
+    border-left: 2px solid currentColor;
+    border-right: 2px solid currentcolor;
+}
+ 
+ul.topnav li.right {
+    float: right;
+}
+ 
+@media screen and (max-width: 1000px) {
+
+    ul.topnav li a.active {
+        border-right: none;
+        border-left: none;
+        border-bottom: 2px solid currentColor;
+        
+    }
+
+    ul.topnav {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+ 
+    ul.topnav li.right,
+    ul.topnav li {
+        float: none;
+    }
+}
+
+@media screen and (min-width: 1280px) { 
+    /* För stora skärmar */
+    main {
+        
+        margin: 0 auto;
+    }
+ 
+    header {
+        
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Base (mobile) styles - All screen resolutions */
+.flex-container-top {
+    width: 100%;
+    background-color: #E8969F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem 1.5rem 2rem;
+}
+#content-top{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    background-color: #F09E42;
+    border-radius: 7px;
+    border: solid black 1px;
+}
+.main-div {
+    margin: 1rem;
+    width: 100%;
+    background-color: #EBC9B4;
+    border-radius: 7px;
+    border: solid black 1px;
+}
+.event {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.event h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* Bottom - Divs */
+.flex-container-bottom {
+    width: 100%;
+    background-color: #E8969F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 2rem 2rem 2rem;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+#content {
+    width: 100%;
+    background-color: #F09E42;
+    border-radius: 5px;
+    border: solid black 1px;
+    height: 300px;
+    padding: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.article-top {
+    width: 100%;
+    flex: 1;
+    background-color: #EBC9B4;
+    border: solid black 1px;
+    border-radius: 7px;
+}
+.article-bottom {
+    width: 100%;
+    flex: 3;
+    background-color: #EBC9B4;
+    border: solid black 1px;
+    border-radius: 7px;
+}
+#sidebar {
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    border: solid black 1px;
+    height: 300px;
+    padding: 0.5rem;
+    background-color: #F09E42;
+    justify-content: center;
+    /* opacity: 0.2; */
+
+}
+#sidebar-content {
+    width: 100%;
+    border: solid black 1px;
+    border-radius: 7px;
+    background-color: #EBC9B4;
+
+}
+
+/* Base (desktop) styles - Screen that are bigger than 481px */
+@media screen and (min-width: 480px) {
+/* The CSS written here will only effect screens bigger than 481px */
+
+.flex-container-bottom {
+    /* max-width: 1280px; */
+    max-width: 1560px;
+    flex-direction: row;
+    margin: 0 auto;
+    border-radius: 0 0 10px 10px;
+}
+#content {
+    height: 400px;
+}
+#sidebar {
+    height: 400px;
+}
+.flex-container-top {
+    /* max-width: 1280px; */
+    max-width: 1560px;
+    flex-direction: row;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+}
+#content-top {
+    height: 600px;
+} 
+}
+
+
+/* ------------FLAGGOR------------ */
+
+.flag-container {
+    margin: 5px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+/* Pride flaggan */
+.pride-flag-container {
+    display: flex;
+    flex-direction: row;
+}
+.pride-flag {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 500px;
+    margin-bottom: 40px;
+}
+.pride-flag #red {
+    background-color: red;
+    height: 50px;
+}
+.pride-flag #orange {
+    background-color: orange;
+    height: 50px;
+}
+.pride-flag #yellow {
+    background-color: yellow;
+    height: 50px;
+}
+.pride-flag #green {
+    background-color: green;
+    height: 50px;
+}
+.pride-flag #blue {
+    background-color: blue;
+    height: 50px;
+}
+.pride-flag #purple {
+    background-color: purple;
+    height: 50px;
+}
+
+/* Frankrikes flagga */
+.france-flag {
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.france-flag #blue {
+    background-color: blue;
+    height: 300px;
+    width: 33.33333%;
+}
+.france-flag #white {
+    background-color: white;
+    height: 300px;
+    width: 33.33333%;
+}
+.france-flag #red {
+    background-color: red;
+    height: 300px;
+    width: 33.33333%;
+}
+
+/* Japans flagga */
+
+.japan-flag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: white;
+    height: 300px;
+    width: 500px;
+    margin-bottom: 40px;
+}
+.japan-flag #red {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Sveriges flagga */
+
+.sweden-flag {
+    width: 500px;
+    height: 300px;
+    margin-bottom: 50px;
+    background-color: blue;
+}
+
+.horisontal {
+    width: 500px;
+    height: 60px;
+    background-color: yellow;
+    margin: 120px 0 0 0;
+}
+.vertical {
+    width: 60px;
+    height: 300px;
+    background-color: yellow;
+    margin: -180px 0 0 150px;
+}
+
+/* ---------- FOOTER ----------- */
+
+/* footer {
+    background-color: #EFE6D2;
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
+} */
