@@ -55,7 +55,6 @@ ul.topnav {
 
 }
 
-
 ul.topnav li a {
     display: block;
     color: black;
@@ -129,6 +128,13 @@ ul.topnav li {
 
 /* TOP DIV CONTAINER */
 
+h1 {
+    padding-top: 30px;
+    text-align: center;
+    font-family: poppins;
+    color: #DB4A2B;
+}
+
 .container {
     
     display: flex; 
@@ -182,7 +188,7 @@ ul.topnav li {
 
 @media screen and (max-width: 767px) { 
     .container {
-        margin-top: 30px;
+        margin-top: 10px;
         flex-direction: column;
         flex-wrap: nowrap;
         padding-top: 15px;
@@ -439,7 +445,7 @@ ul.topnav li {
 
 @media screen and (max-width: 767px) { 
     .antiparos-container {
-        margin-top: 30px;
+        margin-top: 10px;
         flex-direction: column;
         flex-wrap: nowrap;
         padding-top: 15px;
@@ -564,6 +570,232 @@ ul.topnav li {
 }
 
 
+
+
+/*----------- EVENEMANG ----------*/
+
+.event-top-container {
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    max-width: 1300px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.event-top-left-container {
+    flex: 1;
+    margin: 10px;
+    aspect-ratio: 4/3;
+}
+.event-top-left-container img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.event-top-right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    background-color: #EFE6D2;
+    border-radius: 15px;
+    aspect-ratio: 4/3;
+}
+.event-top-right-container h2 {
+    padding-top: 20px;
+    font-family: poppins;
+    color: #DB4A2B;
+}
+.event-top-right-container p {
+    font-size: 1.2rem;
+    padding: 10px;
+    font-family: poppins;
+    line-height: 25px;
+}
+
+  
+
+/* För mobil och platta */
+@media screen and (max-width: 767px) { 
+    .event-top-container {
+        margin-top: 10px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding-top: 15px;
+        gap: 40px;
+    }
+    .event-top-left-container {
+        width: 100%;
+    }
+    .event-top-right-container {
+        width: 100%;
+    }
+    .event-top-left-container img {
+        height: 100%;
+    }
+    
+    .event-top-right-container p {
+        font-size: 1rem;
+        padding: 10px 30px 20px 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }  
+}
+/* För stora skärmar */
+@media screen and (min-width: 1280px) { 
+    
+    .event-top-right-container p {
+        font-size: 1.6rem;
+        margin: 40px;
+        line-height: 1.3;
+        
+    }
+    .event-top-right-container h2 {
+        font-size: 1.8rem;
+    }
+}
+
+.event-bottom-container {
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    max-width: 1300px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 50px;
+    margin-bottom: 40px;
+}
+.event-bottom-right-container {
+    flex: 1;
+    margin: 10px;
+    aspect-ratio: 4/3;
+}
+.event-bottom-right-container img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.event-bottom-left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 10px 10px 10px;
+    flex: 1;
+    margin: 10px;
+    background-color: #EFE6D2;
+    border-radius: 15px;
+    aspect-ratio: 4/3;
+    font-family: poppins;
+}
+
+form {
+    min-width: 300px;
+
+}
+
+input[type=text], select {
+    width: 200px;
+    padding: 8px 4px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=submit] {
+
+    width: 100px;
+    background-color: #DB4A2B;
+    color: white;
+    margin-top: 8px;
+    padding: 8px 4px;
+    margin: 6px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+
+ 
+
+/* MOBIL OCH PADDA */
+@media screen and (max-width: 767px) { 
+    .event-bottom-container {
+        margin-top: 30px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding-top: 15px;
+        gap: 40px;
+    }
+    .event-top-right-container {
+        width: 100%;
+    }
+    .event-top-left-container {
+        width: 100%;
+    }
+    .event-top-right-container img {
+        height: 100%;
+    }
+    form {
+        max-width: 344px;
+    }
+   
+}
+
+
+
+/* -------- GALLERI -------- */
+
+.gallery-grid-container {
+    display: grid;
+    margin-top: 20px !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr); 
+    padding: 10px;  
+    margin-bottom: 40px;
+}
+
+
+.div-image {
+    overflow: hidden;
+    text-align: center;
+} 
+
+
+.gallery-grid-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.div-image p {
+    font-family: poppins;
+}
+
+@media screen and (max-width: 767px) {
+
+    .gallery-grid-container {
+        grid-template-columns: repeat(1,1fr); 
+    }
+}
+
 /* ------------FLAGGOR------------ */
 
 /* MAIN FLAGGSIDAN */
@@ -573,12 +805,7 @@ ul.topnav li {
     margin-top: 10px;
     margin: 0 auto;
 }
-.flag-page-container h1 {
-    padding-top: 20px;
-    text-align: center;
-    font-family: poppins;
-    color: #DB4A2B;
-}
+
 
 .flag-page-container h3 {
     font-size: 1.4rem;
@@ -593,7 +820,7 @@ ul.topnav li {
     padding-top: 50px;
     font-family: poppins;
     width: 100%;
-    margin: 20px auto 80px auto;
+    margin: 30px auto 80px auto;
     max-width: 1200px;
     border-radius: 15px;
 }
@@ -781,236 +1008,6 @@ ul.topnav li {
     margin: -120px 0 0 100px;
     }
 }
-
-
-/* -------- GALLERI -------- */
-
-.gallery-grid-container {
-    display: grid;
-    margin-top: 20px !important;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr); 
-    padding: 10px;  
-    margin-bottom: 40px;
-}
-
-#gallery-h1 {
-    text-align: center;
-    font-family: poppins;
-    color: #DB4A2B;
-    padding-top: 20px;
-}
-
-.div-image {
-    overflow: hidden;
-    text-align: center;
-} 
-
-
-.gallery-grid-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-.div-image p {
-    font-family: poppins;
-}
-
-@media screen and (max-width: 767px) {
-
-    .gallery-grid-container {
-        grid-template-columns: repeat(1,1fr); 
-    }
-}
-
-/* EVENEMANG */
-
-.event-top-container {
-    display: flex; 
-    flex-direction: row;
-    width: 100%;
-    background-color: white;
-    max-width: 1300px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding-top: 50px;
-}
-.event-top-left-container {
-    flex: 1;
-    margin: 10px;
-    aspect-ratio: 4/3;
-}
-.event-top-left-container img {
-    border-radius: 15px;
-    width: 100%;
-}
-
-.event-top-right-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    margin: 10px;
-    text-align: center;
-    background-color: #EFE6D2;
-    border-radius: 15px;
-    aspect-ratio: 4/3;
-}
-.event-top-right-container h2 {
-    padding-top: 20px;
-    font-family: poppins;
-    color: #DB4A2B;
-}
-.event-top-right-container p {
-    font-size: 1.2rem;
-    padding: 10px;
-    font-family: poppins;
-    line-height: 25px;
-}
-
-  
-
-/* För mobil och platta */
-@media screen and (max-width: 767px) { 
-    .event-top-container {
-        margin-top: 30px;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        padding-top: 15px;
-        gap: 40px;
-    }
-    .event-top-left-container {
-        width: 100%;
-    }
-    .event-top-right-container {
-        width: 100%;
-    }
-    .event-top-left-container img {
-        height: 100%;
-    }
-    
-    .event-top-right-container p {
-        font-size: 1rem;
-        padding: 10px 30px 20px 30px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }  
-}
-/* För stora skärmar */
-@media screen and (min-width: 1280px) { 
-    
-    .event-top-right-container p {
-        font-size: 1.6rem;
-        margin: 40px;
-        line-height: 1.3;
-        
-    }
-    .event-top-right-container h2 {
-        font-size: 1.8rem;
-    }
-}
-
-.event-bottom-container {
-    display: flex; 
-    flex-direction: row;
-    width: 100%;
-    background-color: white;
-    max-width: 1300px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding-top: 50px;
-    margin-bottom: 40px;
-}
-.event-bottom-right-container {
-    flex: 1;
-    margin: 10px;
-    aspect-ratio: 4/3;
-}
-.event-bottom-right-container img {
-    border-radius: 15px;
-    width: 100%;
-}
-
-.event-bottom-left-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 20px 10px 10px 10px;
-    flex: 1;
-    margin: 10px;
-    background-color: #EFE6D2;
-    border-radius: 15px;
-    aspect-ratio: 4/3;
-    font-family: poppins;
-}
-
-form {
-    min-width: 300px;
-
-}
-
-input[type=text], select {
-    width: 200px;
-    padding: 8px 4px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  input[type=submit] {
-
-    width: 100px;
-    background-color: #DB4A2B;
-    color: white;
-    margin-top: 8px;
-    padding: 8px 4px;
-    margin: 6px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  input {
-    width: 200px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-
- 
-
-/* MOBIL OCH PADDA */
-@media screen and (max-width: 767px) { 
-    .event-bottom-container {
-        margin-top: 30px;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        padding-top: 15px;
-        gap: 40px;
-    }
-    .event-top-right-container {
-        width: 100%;
-    }
-    .event-top-left-container {
-        width: 100%;
-    }
-    .event-top-right-container img {
-        height: 100%;
-    }
-    form {
-        max-width: 344px;
-    }
-   
-}
-
 
 
 
