@@ -1,4 +1,3 @@
-/* ____________ NY RESPONSIV KOD ______________ */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -11,12 +10,12 @@ body {
     background-color: white;
 }
 
-/* --------- HEADER ---------- */
+/* ----------- OM MIG ------------ */
+
+/* HEADER */
 
 header {
-   width:100%;
-   
-    
+    width:100%;
     text-align: left;
     padding-top: 30px;
     background-color: #EFE6D2;
@@ -44,7 +43,7 @@ header {
     }
 }
 
-/* MENYN */
+/* NAV */
 
 ul.topnav {
     list-style-type: none;
@@ -55,10 +54,7 @@ ul.topnav {
     padding-bottom: 10px;
 
 }
- 
-ul.topnav li {
-    float: left;
-}
+
 
 ul.topnav li a {
     display: block;
@@ -69,26 +65,24 @@ ul.topnav li a {
     font-size: 20px;
     font-weight: 700;
     font-family: poppins;
-    
 }
  
 ul.topnav li a:hover:not(.active) {
-    /* background-color: #ffffff5b; */
     color: #DB4A2B;
- 
 }
  
 ul.topnav li a.active {
     color: #DB4A2B;
     font-weight: bold;
-    /* border-bottom: 2px solid currentColor; */
     border-left: 2px solid currentColor;
     border-right: 2px solid currentcolor;
 }
  
-ul.topnav li.right {
+ul.topnav li {
     float: right;
 }
+
+/* FÖR MOBIL OCH PADDA */
  
 @media screen and (max-width: 767px) {
 
@@ -100,11 +94,11 @@ ul.topnav li.right {
 
     ul.topnav {
         padding-right: 0;
+        padding-bottom: 0;
         display: flex;
         flex-direction: column-reverse;
     }
  
-    ul.topnav li.right,
     ul.topnav li {
         float: none;
     }
@@ -133,7 +127,7 @@ ul.topnav li.right {
     }
 }
 
-/* MAIN DIV CONTAINER */
+/* TOP DIV CONTAINER */
 
 .container {
     
@@ -141,8 +135,7 @@ ul.topnav li.right {
     flex-direction: row;
     width: 100%;
     background-color: white;
-    /* border: 1px black solid; */
-    max-width: 1560px;
+    max-width: 1300px;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -150,16 +143,12 @@ ul.topnav li.right {
 
 }
 
-#left-div {
+.left-div {
     flex: 1;
-    /* border: 1px black solid; */
     margin: 10px;
-    /* border-radius: 10px; */
-    aspect-ratio: 1/1;
-
-
+    aspect-ratio: 4/3;
 }
-#right-div {
+.right-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -169,120 +158,455 @@ ul.topnav li.right {
     background-color: #EFE6D2;
     border-radius: 15px;
     text-align: center;
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/3;
 }
 
-#right-div h2 {
-    padding-top: 30px;
+.right-div h2 {
+    padding-top: 20px;
     font-family: poppins;
     color: #DB4A2B;
 }
-#right-div p {
+.right-div p {
     font-size: 1.2rem;
-    padding: 20px 40px 20px 40px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    font-family: poppins;
+    line-height: 25px;
 }
-#right-div p.antiparos {
-        letter-spacing: 0;
-        padding: 15px;  
-}
-#left-div img {
+
+.left-div img {
     width: 100%;
     border-radius: 15px;
 }
 
-/* MOBILE AND TABLET */
+/* MOBIL OCH PADDA */
 
 @media screen and (max-width: 767px) { 
     .container {
+        margin-top: 30px;
         flex-direction: column;
         flex-wrap: nowrap;
         padding-top: 15px;
+        gap: 40px;
     }
-    #left-div {
+    .left-div {
         width: 100%;
     }
-    #right-div {
+    .right-div {
         width: 100%;
     }
-    #left-div img {
-        
+    .left-div img {
         height: 100%;
-    
     }
-    #right-div p {
-        font-size: 1.2rem;
-        padding: 10px 40px 20px 40px;
+    
+    .right-div p {
+        font-size: 1rem;
+        padding: 10px 30px 20px 30px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        letter-spacing: 1.2px;
     }  
+}
+@media screen and (min-width: 1280px) { 
+    /* För stora skärmar */
+    .right-div p {
+        font-size: 1.6rem;
+        margin: 40px;
+        line-height: 1.3;
+        
+    }
+    .right-div h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* MIDDLE DIV CONTAINER */
+
+.middle-container {
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    max-width: 1300px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.middle-left-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 10px;
+    background-color: #EFE6D2;
+    border-radius: 15px;
+    text-align: center;
+    aspect-ratio: 4/3;
+}
+
+.middle-left-div h2 {
+    padding-top: 20px;
+    font-family: poppins;
+    color: #DB4A2B;
+}
+.middle-left-div p {
+    font-size: 1.2rem;
+    padding: 10px;
+    font-family: poppins;
+    line-height: 25px;
+}
+
+
+.middle-right-div {
+    flex: 1;
+    margin: 10px;
+    aspect-ratio: 4/3;
+}
+.middle-right-div img {
+    width: 100%;
+    border-radius: 15px;
+}
+@media screen and (max-width: 767px) { 
+    .middle-container {
+        margin-top: 30px;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        padding-top: 15px;
+        gap: 40px;
+    }
+    .middle-right-div {
+        width: 100%;
+    }
+    .middle-left-div {
+        width: 100%;
+    }
+    .middle-right-div img {
+        height: 100%;
+    }
+    
+    .middle-left-div p {
+        font-size: 1rem;
+        padding: 10px 30px 20px 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }  
+}
+@media screen and (min-width: 1280px) { 
+    /* För stora skärmar */
+    .middle-left-div p {
+        font-size: 1.6rem;
+        line-height: 1.3;
+        
+    }
+    .middle-left-div h2 {
+        font-size: 1.8rem;
+    }
 }
 
 
 /* BOTTOM DIV CONTAINER */
 
-.bottom-container {
-    
+.bottom-container {  
     display: flex; 
     flex-direction: row;
     width: 100%;
     background-color: white;
-    /* border: 1px black solid; */
-    height: 80vh;
-    max-width: 1560px;
+    max-width: 1300px;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+}
+
+.bottom-left-div {
+    flex: 1;
+    margin: 10px;
+    aspect-ratio: 4/3;
+}
+.bottom-right-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 10px;
+    background-color: #EFE6D2;
+    border-radius: 15px;
+    text-align: center;
+    aspect-ratio: 4/3;
+}
+
+.bottom-right-div h2 {
+    padding-top: 20px;
+    font-family: poppins;
+    color: #DB4A2B;
+}
+.bottom-right-div p {
+    font-size: 1.2rem;
+    padding: 10px;
+    font-family: poppins;
+    line-height: 25px;
+}
+
+.bottom-left-div img {
+    width: 100%;
+    border-radius: 15px;
+}
+@media screen and (max-width: 767px) { 
+    .bottom-container {
+        margin-top: 30px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding-top: 15px;
+        gap: 40px;
+    }
+    .bottom-left-div {
+        width: 100%;
+    }
+    .bottom-right-div {
+        width: 100%;
+    }
+    .bottom-left-div img {
+        height: 100%;
+    }
+    
+    .bottom-right-div p {
+        font-size: 1rem;
+        padding: 10px 30px 20px 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }  
+}
+@media screen and (min-width: 1280px) { 
+    /* För stora skärmar */
+    .bottom-right-div p {
+        font-size: 1.6rem;
+        margin: 40px;
+        line-height: 1.3;
+        
+    }
+    .bottom-right-div h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* -------------ANTIPAROS ------------ */
+
+.antiparos-container {
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    max-width: 1300px;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-
+    padding-top: 50px;
 }
-
-#left-div2 {
+.antiparos-left-div {
     flex: 1;
-    border: 1px black solid;
-    height: 50vh;
     margin: 10px;
-
-
+    aspect-ratio: 4/3;
 }
-#right-div2 {
+.antiparos-right-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex: 1;
-    border: 1px black solid;
-    height: 50vh;
     margin: 10px;
+    background-color: #EFE6D2;
+    border-radius: 15px;
+    text-align: center;
+    aspect-ratio: 4/3;
 }
 
-/* MOBILE AND TABLET */
+.antiparos-right-div h2 {
+    padding-top: 20px;
+    font-family: poppins;
+    color: #DB4A2B;
+}
+.antiparos-right-div p {
+    padding: 10px;
+    font-family: poppins;
+    line-height: 25px;
+}
+.antiparos-right-div p.antiparos {
+        padding: 15px;  
+}
+.antiparos-left-div img {
+    width: 100%;
+    border-radius: 15px;
+    
+}
 
 @media screen and (max-width: 767px) { 
-    .bottom-container {
+    .antiparos-container {
+        margin-top: 30px;
         flex-direction: column;
-        margin-top: 20px;
-        /* gap: 30px; */
+        flex-wrap: nowrap;
+        padding-top: 15px;
+        gap: 40px;
     }
-    #left-div2 {
+    .antiparos-left-div {
         width: 100%;
     }
-    #right-div2 {
+    .antiparos-right-div {
         width: 100%;
+    }
+    .antiparos-left-div img {
+        height: 100%;
+    }
+    
+    .antiparos-right-div p {
+        font-size: 1rem;
+        padding: 10px 30px 20px 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }  
+}
+@media screen and (min-width: 1280px) { 
+    /* För stora skärmar */
+    .antiparos-right-div p {
+        font-size: 1.6rem;
+        margin: 40px;
+        line-height: 1.3;
+        
+    }
+    .antiparos-right-div h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+/* BOTTOM CONTAINER */
+.antiparos-bottom-container {  
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    max-width: 1300px;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+}
+
+.antiparos-bottom-right-div {
+    flex: 1;
+    padding-bottom: 50%;
+    position: relative;
+}
+.antiparos-bottom-right-div iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    object-fit: contain;
+
+}
+.antiparos-bottom-left-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 10px;
+    background-color: #EFE6D2;
+    border-radius: 15px;
+    text-align: center;
+    aspect-ratio: 4/3;
+}
+.antiparos-bottom-left-div h2 {
+    font-family: poppins;
+    font-size: 1.5rem;
+    color: #DB4A2B;
+}
+.antiparos-bottom-left-div ol {
+    text-align: start;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    font-family: poppins;
+}
+.antiparos-bottom-left-div p {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 10px;
+    font-family: poppins;
+    line-height: 25px;
+    font-weight: 500;  
+}
+
+
+
+
+/* MOBIL OCH PADDA */
+
+@media screen and (max-width: 767px) { 
+    .antiparos-bottom-container {
+        flex-direction: column-reverse;
+        margin-top: 60px;
+        gap: 40px;
+    }
+    .antiparos-bottom-left-div {
+        width: 100%;
+    }
+    .antiparos-bottom-right-div {
+        width: 100%;
+    }
+    .antiparos-bottom-left-div h2 {
+        font-family: poppins;
+        font-size: 1.5rem;
+    }
+
+    .antiparos-bottom-left-div ol {
+        font-size: 1rem;
     }
 }
 
 
 /* ------------FLAGGOR------------ */
 
+/* MAIN FLAGGSIDAN */
+
+.flag-page-container {
+    width: 100%;
+    margin-top: 10px;
+    margin: 0 auto;
+}
+.flag-page-container h1 {
+    padding-top: 20px;
+    text-align: center;
+    font-family: poppins;
+    color: #DB4A2B;
+}
+
+.flag-page-container h3 {
+    font-size: 1.4rem;
+}
+
 .flag-container {
-    margin: 5px;
-    background-color: lightgray;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 20px;
+    background-color: #EFE6D2;
+    padding-top: 50px;
+    font-family: poppins;
+    width: 100%;
+    margin: 20px auto 80px auto;
+    max-width: 1200px;
+    border-radius: 15px;
+}
+
+/* Pride flaggan */
+
+.pride-flag-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
 }
-/* Pride flaggan */
-.pride-flag-container {
-    display: flex;
-    flex-direction: row;
-}
+
+
 .pride-flag {
     margin-top: 20px;
     display: flex;
@@ -317,6 +641,14 @@ ul.topnav li.right {
 }
 
 /* Frankrikes flagga */
+
+.france-flag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 .france-flag {
     display: flex;
     flex-direction: row;
@@ -343,6 +675,12 @@ ul.topnav li.right {
 
 /* Japans flagga */
 
+.japan-flag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .japan-flag {
     display: flex;
     justify-content: center;
@@ -362,7 +700,14 @@ ul.topnav li.right {
 
 /* Sveriges flagga */
 
+.sweden-flag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .sweden-flag {
+    margin-top: 20px;
     width: 500px;
     height: 300px;
     margin-bottom: 50px;
@@ -379,17 +724,63 @@ ul.topnav li.right {
     width: 60px;
     height: 300px;
     background-color: yellow;
-    margin: -180px 0 0 150px;
+    margin: -180px 0 0 140px;
 }
 
-/* ---------- FOOTER ----------- */
+/* MOBIL OCH PADDA */
 
-/* footer {
-    background-color: #EFE6D2;
-    height: 10vh;
-    position: absolute;
-    bottom: 0;
-} */
+@media screen and (max-width: 1100px) { 
+
+    .flag-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .flag-page-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .pride-flag {
+        height: 200px;
+        width: 350px;
+    }
+    .france-flag {
+        height: 200px;
+        width: 350px;   
+    }
+    .france-flag #blue {
+        height: 200px;
+    }
+    .france-flag #white {
+        height: 200px; 
+    }
+    .france-flag #red {
+        height: 200px;   
+    }
+    
+    .japan-flag {
+        height: 200px;
+        width: 350px;
+    }
+
+    .japan-flag #red {
+    width: 100px;
+    height: 100px;
+    }
+    .sweden-flag {
+        height: 200px;
+        width: 350px;
+    }
+    .horisontal {
+    width: 350px;
+    height: 40px;
+    margin: 80px 0 0 0;
+    }
+    .vertical {
+    width: 40px;
+    height: 200px;
+    margin: -120px 0 0 100px;
+    }
+}
 
 
 /* -------- GALLERI -------- */
@@ -401,18 +792,31 @@ ul.topnav li.right {
     margin: 0 auto;
     gap: 20px;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);   
+    grid-template-rows: repeat(2,1fr); 
+    padding: 10px;  
+    margin-bottom: 40px;
+}
+
+#gallery-h1 {
+    text-align: center;
+    font-family: poppins;
+    color: #DB4A2B;
+    padding-top: 20px;
 }
 
 .div-image {
     overflow: hidden;
     text-align: center;
+} 
 
-}
 
 .gallery-grid-container img {
     width: 100%;
     height: auto;
+    border-radius: 5px;
+}
+.div-image p {
+    font-family: poppins;
 }
 
 @media screen and (max-width: 767px) {
@@ -422,4 +826,252 @@ ul.topnav li.right {
     }
 }
 
+/* EVENEMANG */
+
+.event-top-container {
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    max-width: 1300px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.event-top-left-container {
+    flex: 1;
+    margin: 10px;
+    aspect-ratio: 4/3;
+}
+.event-top-left-container img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.event-top-right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    background-color: #EFE6D2;
+    border-radius: 15px;
+    aspect-ratio: 4/3;
+}
+.event-top-right-container h2 {
+    padding-top: 20px;
+    font-family: poppins;
+    color: #DB4A2B;
+}
+.event-top-right-container p {
+    font-size: 1.2rem;
+    padding: 10px;
+    font-family: poppins;
+    line-height: 25px;
+}
+
   
+
+/* För mobil och platta */
+@media screen and (max-width: 767px) { 
+    .event-top-container {
+        margin-top: 30px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding-top: 15px;
+        gap: 40px;
+    }
+    .event-top-left-container {
+        width: 100%;
+    }
+    .event-top-right-container {
+        width: 100%;
+    }
+    .event-top-left-container img {
+        height: 100%;
+    }
+    
+    .event-top-right-container p {
+        font-size: 1rem;
+        padding: 10px 30px 20px 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }  
+}
+/* För stora skärmar */
+@media screen and (min-width: 1280px) { 
+    
+    .event-top-right-container p {
+        font-size: 1.6rem;
+        margin: 40px;
+        line-height: 1.3;
+        
+    }
+    .event-top-right-container h2 {
+        font-size: 1.8rem;
+    }
+}
+
+.event-bottom-container {
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    max-width: 1300px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 50px;
+    margin-bottom: 40px;
+}
+.event-bottom-right-container {
+    flex: 1;
+    margin: 10px;
+    aspect-ratio: 4/3;
+}
+.event-bottom-right-container img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.event-bottom-left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 10px 10px 10px;
+    flex: 1;
+    margin: 10px;
+    background-color: #EFE6D2;
+    border-radius: 15px;
+    aspect-ratio: 4/3;
+    font-family: poppins;
+}
+
+form {
+    min-width: 300px;
+
+}
+
+input[type=text], select {
+    width: 200px;
+    padding: 8px 4px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=submit] {
+
+    width: 100px;
+    background-color: #DB4A2B;
+    color: white;
+    margin-top: 8px;
+    padding: 8px 4px;
+    margin: 6px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+
+ 
+
+/* MOBIL OCH PADDA */
+@media screen and (max-width: 767px) { 
+    .event-bottom-container {
+        margin-top: 30px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding-top: 15px;
+        gap: 40px;
+    }
+    .event-top-right-container {
+        width: 100%;
+    }
+    .event-top-left-container {
+        width: 100%;
+    }
+    .event-top-right-container img {
+        height: 100%;
+    }
+    form {
+        max-width: 344px;
+    }
+   
+}
+
+
+
+
+
+/* ---------- FOOTER ----------- */
+
+footer {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    background-color: #EFE6D2;
+    width: 100%;
+    justify-content: space-between;
+}  
+.footer-contact-info {
+    padding: 30px;
+    flex: 1;
+    width: 100%;
+}
+.footer-contact-info p {
+    font-family: poppins;
+}
+.footer-image {
+    flex: 1;
+    width: 200px;
+}
+.footer-img {
+    object-fit: contain;
+    width: 200px;
+}
+
+.footer-social-media {
+    flex: 1;
+}
+.fa {
+    padding: 20px;
+    font-size: 50px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  .fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    color: black;
+  }
+  .fa-twitter {
+    color: black;
+  }
+  .fa-youtube {
+    color: black;
+  }
+  .fa-instagram {
+    color: black;
+  }
+
+@media screen and (max-width: 767px) { 
+    footer {
+        flex-direction: column;
+    }
+}
